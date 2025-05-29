@@ -15,7 +15,15 @@ O projeto implementa requisitos técnicos como: APIs, Microsserviços, Events, D
 
 > As ferramentas incluídas no desenho de solução como New Relic, SonarQube, ApiGee, JMeter, Github Actions, Helm, são ferramentas que recomendo dado as caracteristicas do projeto, mas podem ser modificadas dado as escolhas do cliente ou por questões de negociação de licenciamento.
 
-**Você também pode acessar os diagramas C4 do projeto aqui:** ![C4 Diagrams](docs/C4-Diagrams.md)
+**Você também pode acessar os diagramas C4 do projeto aqui:** [**_C4 Diagrams_**](docs/C4-Diagrams.md)
 
 ## ADRs
 Abaixo o link para os registros de decisões arquiteturais, no qual detalho a motivação para escolha de algumas ferramentas escolhidos para o projeto.
+
+[**_ADR001 - MongoDB_**](docs/adr/ADR001-Mongodb.md)
+
+[**_ADR002 - Postgres_**](docs/adr/ADR002-Postgres.md)
+
+[**_ADR003 - Rabbitmq_**](docs/adr/ADR003-Rabbitmq.md)
+
+[**_ADR004 - Keycloack_**](docs/adr/ADR004-Keycloack.md)
