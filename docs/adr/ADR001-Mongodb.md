@@ -11,19 +11,6 @@ O `ms-cashflow-transactions` é um projeto .NET para gestão de transações de 
 
 Ficou decido utilizar o MongoDB como banco de dados para este serviço. Com modelo de implantação on-premises em cluster Kubernetes com Mongo Operator.
 
-              +--------------------+
-              |    MongoDB svc     |
-              +---------+----------+
-                        |
-            +-----------+-----------+
-            |     StatefulSet       |
-            |                       |
-+--------------+  +--------------+  +--------------+
-| pod-mongo01  |  | pod-mongo02  |  | pod-mongo03  |
-| PVC /data    |  | PVC /data    |  | PVC /data    |
-+--------------+  +--------------+  +--------------+
-
-
 ## Justificativas
 
 - **Alta performance na escrita**: MongoDB é otimizado para operações de escrita, especialmente em cenários com inserções massivas como registros financeiros.

@@ -11,18 +11,6 @@ O ecossistema do Cashflow App é composto por dois microsserviços desenvolvidos
 
 Ficou decidido utilizar o RabbitMQ como broker de eventos. Com modelo de implantação on-premises em cluster Kubernetes com operador do RabbitMQ da VMware.
 
-              +--------------------+
-              |   RabbitMQ svc     |
-              +---------+----------+
-                        |
-            +-----------+-----------+
-            |     StatefulSet       |
-            |                       |
-+--------------+  +--------------+  +--------------+
-| pod-rmq01    |  | pod-rmq02    |  | pod-rmq03    |
-| PVC /data    |  | PVC /data    |  | PVC /data    |
-+--------------+  +--------------+  +--------------+
-
 ## Justificativas
 
 - **Confiabilidade**: Confirmação de entrega, persistência e dead-letter em caso de falha no consumo.

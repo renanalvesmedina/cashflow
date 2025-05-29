@@ -11,18 +11,6 @@ O `ms-cashflow-management` é um projeto .NET para gestão de caixa, com foco em
 
 Ficou decidido utilizar o PostgreSQL como banco de dados para este serviço. Com modelo de implantação on-premises em cluster Kubernetes com Postgres Operator da CrunchyData.
 
-              +---------------------+
-              |   PostgreSQL svc    |
-              +----------+----------+
-                         |
-             +-----------+-----------+
-             |     StatefulSet       |
-             |                       |
-+---------------+  +---------------+  +---------------+
-| pod-pg01      |  | pod-pg02      |  | pod-pg03      |
-| PVC /pgdata   |  | PVC /pgdata   |  | PVC /pgdata   |
-+---------------+  +---------------+  +---------------+
-
 ## Justificativas
 
 - **Consistência**: O PostgreSQL tem suporte completo a transações ACID, garantindo integridade dos dados mesmo em operações volumosas e concorrentes.
