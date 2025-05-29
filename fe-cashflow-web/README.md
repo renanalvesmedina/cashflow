@@ -1,27 +1,33 @@
-# CashflowWeb
+# Cashflow Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Este é o projeto front-end do Cashflow App.
 
-## Development server
+> Angular 19
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Etapas para executar
 
-## Code scaffolding
+Na pasta do projeto `fe-cashflow-web`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Execute um `npm install` para instalar as dependencias do projeto.
 
-## Build
+Execute `ng serve` para rodar a aplicação local. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Acesse a aplicação no endereço: `http://localhost:4200/`.
 
-## Running unit tests
+![image](https://github.com/user-attachments/assets/79665ce6-428b-4abe-87d5-1ad6196d286f)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Dicas
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Caso precise ajustar o endereço das apis ou do keycloack, pode realizar a mudança no arquivo `fe-cashflow-web/src/environments/environment.ts`.
+> Por padrão estás são as variaveis de ambiente definidas no environment
+>
+> keycloackRealmUrl: `http://localhost:8080/realms/cashflow/protocol/openid-connect/token`
+>
+> keycloackClientId: `cashflow-web`
+>
+> keycloackGrantType: `password`
+>
+> cashflowTransactionApi: `http://localhost:5282/api`
+>
+> cashflowManagementApi:  `http://localhost:5251/api`
