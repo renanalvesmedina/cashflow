@@ -11,8 +11,11 @@ Estas features atendem os requisitos funcionais onde um gestor pode controlar se
 O projeto implementa requisitos técnicos como: APIs, Microsserviços, Events, Dados distribuidos, DDD.
 
 ## Arquitetura de Soluções
-![image](https://github.com/user-attachments/assets/daa641cd-fe5d-46d3-8b4a-cb8a1ea50dbc)
+![image](docs/ArquiteturaCashflow.png)
+
+> As ferramentas incluídas no desenho de solução como New Relic, SonarQube, ApiGee, JMeter, Github Actions, Helm, são ferramentas que recomendo dado as caracteristicas do projeto, mas podem ser modificadas dado as escolhas do cliente ou por questões de negociação de licenciamento.
+
+**Você também pode acessar os diagramas C4 do projeto aqui:** ![C4 Diagrams](docs/C4-Diagrams.md)
 
 ## ADRs
-Abaixo o link para os registros de decisões arquiteturais, no qual detalho a motivação para escolha de cada ferramenta, tecnologia e framework do projeto.
-
+Abaixo o link para os registros de decisões arquiteturais, no qual detalho a motivação para escolha de algumas ferramentas escolhidos para o projeto.
