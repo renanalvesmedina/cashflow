@@ -20,6 +20,14 @@ O projeto implementa requisitos técnicos como: APIs, Microsserviços, Events, D
 - _NPM_
 - _Visual Studio/VS Code_
 
+**0 - (IMPORTANTE) Seed de dados do app**
+> Na pasta `cashflow-seeder`
+```sh
+dotnet restore cashflow-seeder.csproj
+
+dotnet run --project cashflow-seeder.csproj
+```
+
 **1 - Execute o docker-compose com as ferramentas necessárias para o ambiente.**
 > Na pasta raiz do projeto `cashflow`
 ```sh
@@ -48,6 +56,14 @@ dotnet run --project .\Cashflow.Management.Api\Cashflow.Management.Api.csproj
 npm install
 
 ng serve
+```
+> Para acessar a aplicação os dados são
+```sh
+`http://localhost:4200`
+
+UserAdmin: cashflow.manager@teste.com | Passw0rd
+UserComum: cashflow.employee@teste.com | Passw0rd
+
 ```
 
 ## Arquitetura de Soluções
