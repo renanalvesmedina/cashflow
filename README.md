@@ -10,6 +10,46 @@ Estas features atendem os requisitos funcionais onde um gestor pode controlar se
 
 O projeto implementa requisitos técnicos como: APIs, Microsserviços, Events, Dados distribuidos, DDD.
 
+## Como executar a aplicação
+
+### Pré requisitos:
+- _Docker_
+- _Garanta que os 4 serviços do compose estão up. (MongoDB, Postgres, RabbitMQ, Keycloack)_
+- _.NET 8_
+- _Node +20_
+- _NPM_
+- _Visual Studio/VS Code_
+
+**1 - Execute o docker-compose com as ferramentas necessárias para o ambiente.**
+> Na pasta raiz do projeto `cashflow`
+```sh
+docker-compose up -d
+```
+
+**2 - Execute o serviço ms-cashflow-transactions**
+> Na pasta `ms-cashflow-transactions`, execute os comando abaixo:
+```sh
+dotnet restore .\Cashflow.Transactions.Api\Cashflow.Transactions.Api.csproj
+
+dotnet run --project .\Cashflow.Transactions.Api\Cashflow.Transactions.Api.csproj
+```
+
+**3 - Execute o serviço ms-cashflow-management**
+> Na pasta `ms-cashflow-management`, execute os comando abaixo:
+```sh
+dotnet restore .\Cashflow.Management.Api\Cashflow.Management.Api.csproj
+
+dotnet run --project .\Cashflow.Management.Api\Cashflow.Management.Api.csproj
+```
+
+**4 - Execute o FrontEnd**
+> Na pasta `fe-cashflow-web`, execute os comando abaixo:
+```sh
+npm install
+
+ng serve
+```
+
 ## Arquitetura de Soluções
 ![image](docs/ArquiteturaCashflow.png)
 
@@ -18,7 +58,7 @@ O projeto implementa requisitos técnicos como: APIs, Microsserviços, Events, D
 **Você também pode acessar os diagramas C4 do projeto aqui:** [**_C4 Diagrams_**](docs/C4-Diagrams.md)
 
 ## ADRs
-Abaixo o link para os registros de decisões arquiteturais, no qual detalho a motivação para escolha de algumas ferramentas escolhidos para o projeto.
+Abaixo os links para os registros de decisões arquiteturais, no qual detalho a motivação para escolha de algumas ferramentas escolhidos para o projeto.
 
 [**_ADR001 - MongoDB_**](docs/adr/ADR001-Mongodb.md)
 
@@ -27,3 +67,12 @@ Abaixo o link para os registros de decisões arquiteturais, no qual detalho a mo
 [**_ADR003 - Rabbitmq_**](docs/adr/ADR003-Rabbitmq.md)
 
 [**_ADR004 - Keycloack_**](docs/adr/ADR004-Keycloack.md)
+
+## Data Model
+Abaixo os links para o desenho das entidades e da modelagem de dados.
+
+[**_Transaction_**](docs/DataModel/Transaction.md)
+
+[**_CashStatement_**](docs/DataModel/CashStatement.md)
+
+[**_ConsolidatedTransactionHistory_**](docs/DataModel/ConsolidatedTransactionHistory.md)

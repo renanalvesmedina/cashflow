@@ -58,14 +58,6 @@ services:
       - keycloak_data:/opt/keycloak/data
     command: start-dev
 
-  transactions-api:
-    image: cashflowtransactionsapi:dev
-    build:
-      context: ./Cashflow.Transactions
-    ports:
-      - "32880:8080"
-      - "32881:8081"
-
 volumes:
   mongo_data:
   postgres_data:
