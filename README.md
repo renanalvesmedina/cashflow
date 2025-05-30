@@ -21,13 +21,13 @@ O projeto implementa requisitos técnicos como: APIs, Microsserviços, Events, D
 - _Visual Studio/VS Code_
 
 **1 - Execute o docker-compose com as ferramentas necessárias para o ambiente.**
-> Na pasta raiz do projeto `cashflow`
+> No diretório raiz do projeto `cashflow`
 ```sh
 docker-compose up -d
 ```
 
 **2 - Execute o serviço ms-cashflow-transactions**
-> Na pasta `ms-cashflow-transactions`, execute os comando abaixo:
+> No diretório `cashflow\ms-cashflow-transactions`, execute os comando abaixo:
 ```sh
 dotnet restore .\Cashflow.Transactions.Api\Cashflow.Transactions.Api.csproj
 
@@ -35,7 +35,7 @@ dotnet run --project .\Cashflow.Transactions.Api\Cashflow.Transactions.Api.cspro
 ```
 
 **3 - Execute o serviço ms-cashflow-management**
-> Na pasta `ms-cashflow-management`, execute os comando abaixo:
+> No diretório `cashflow\ms-cashflow-management`, execute os comando abaixo:
 ```sh
 dotnet restore .\Cashflow.Management.Api\Cashflow.Management.Api.csproj
 
@@ -43,7 +43,7 @@ dotnet run --project .\Cashflow.Management.Api\Cashflow.Management.Api.csproj
 ```
 
 **4 - (IMPORTANTE) Seed de dados do app**
-> Na pasta `cashflow-seeder`
+> No diretório `cashflow\cashflow-seeder`
 ```sh
 dotnet restore .\cashflow-seeder.csproj
 
@@ -51,7 +51,7 @@ dotnet run --project .\cashflow-seeder.csproj
 ```
 
 **5 - Execute o FrontEnd**
-> Na pasta `fe-cashflow-web`, execute os comando abaixo:
+> No diretório `cashflow\fe-cashflow-web`, execute os comando abaixo:
 ```sh
 npm install
 
