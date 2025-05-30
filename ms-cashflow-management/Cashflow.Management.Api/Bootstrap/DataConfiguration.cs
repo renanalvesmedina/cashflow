@@ -14,5 +14,16 @@ namespace Cashflow.Management.Api.Bootstrap
 
             return services;
         }
+
+        public static IApplicationBuilder DataConfigure(this IApplicationBuilder app)
+        {
+            using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
+
+            using var appDbContext = serviceScope.ServiceProvider.GetService<AppDbContext>();
+
+            appDbContext?.Database.Migrate();
+
+            return app;
+        }
     }
 }

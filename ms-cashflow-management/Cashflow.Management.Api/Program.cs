@@ -21,6 +21,8 @@ if (app.Environment.IsDevelopment())
     app.UseCors("DevelopmentCors");
 }
 
+app.DataConfigure();
+
 app.UseCors("ProductionCors");
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseHttpsRedirection();

@@ -20,14 +20,6 @@ O projeto implementa requisitos técnicos como: APIs, Microsserviços, Events, D
 - _NPM_
 - _Visual Studio/VS Code_
 
-**0 - (IMPORTANTE) Seed de dados do app**
-> Na pasta `cashflow-seeder`
-```sh
-dotnet restore cashflow-seeder.csproj
-
-dotnet run --project cashflow-seeder.csproj
-```
-
 **1 - Execute o docker-compose com as ferramentas necessárias para o ambiente.**
 > Na pasta raiz do projeto `cashflow`
 ```sh
@@ -50,7 +42,15 @@ dotnet restore .\Cashflow.Management.Api\Cashflow.Management.Api.csproj
 dotnet run --project .\Cashflow.Management.Api\Cashflow.Management.Api.csproj
 ```
 
-**4 - Execute o FrontEnd**
+**4 - (IMPORTANTE) Seed de dados do app**
+> Na pasta `cashflow-seeder`
+```sh
+dotnet restore .\cashflow-seeder.csproj
+
+dotnet run --project .\cashflow-seeder.csproj
+```
+
+**5 - Execute o FrontEnd**
 > Na pasta `fe-cashflow-web`, execute os comando abaixo:
 ```sh
 npm install
@@ -64,8 +64,9 @@ http://localhost:4200
 
 UserAdmin: cashflow.manager@teste.com | Passw0rd
 UserComum: cashflow.employee@teste.com | Passw0rd
-
 ```
+
+**Extra - Caso queira testar a importação em massa das transactions, pode utilizar o arquivo `import_transactions.csv`. A importação pode ser feita na tela de Transações.**
 
 ## Arquitetura de Soluções
 ![image](docs/ArquiteturaCashflow.png)
@@ -93,3 +94,12 @@ Abaixo os links para o desenho das entidades e da modelagem de dados.
 [**_CashStatement_**](docs/DataModel/CashStatement.md)
 
 [**_ConsolidatedTransactionHistory_**](docs/DataModel/ConsolidatedTransactionHistory.md)
+
+## Teste de carga
+
+[**_Teste Carga Cashflow Management_**](Cashflow-performance-report.pdf)
+
+
+Projeto desenvolvido por: Renan Alves Medina
+
+Obrigado! :)

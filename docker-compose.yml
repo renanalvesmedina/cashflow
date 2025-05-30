@@ -21,7 +21,7 @@ services:
     environment:
       POSTGRES_USER: cashflow
       POSTGRES_PASSWORD: Passw0rd
-      POSTGRES_DB: cashflowdb
+      POSTGRES_DB: keycloak
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -57,7 +57,7 @@ services:
     volumes:
       - keycloak_data:/opt/keycloak/data
       - ./keycloak:/opt/keycloak/data/import
-    command: start-dev
+    command: start-dev --import-realm
 
 volumes:
   mongo_data:
