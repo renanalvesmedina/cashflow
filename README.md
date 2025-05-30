@@ -57,9 +57,10 @@ npm install
 
 ng serve
 ```
+
 > Para acessar a aplicação os dados são
 ```sh
-`http://localhost:4200`
+http://localhost:4200
 
 UserAdmin: cashflow.manager@teste.com | Passw0rd
 UserComum: cashflow.employee@teste.com | Passw0rd
